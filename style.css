@@ -1,0 +1,126 @@
+:root {
+  --bg-color: #f9f9ff;
+  --text-color: #333;
+  --bubble-color: #fff;
+  --accent: #8e44ad;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --bubble-color: #1e1e1e;
+  --accent: #bb86fc;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  transition: background 0.5s, color 0.5s;
+}
+
+.container {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.2em;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1em;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 90px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1em;
+  background: var(--bubble-color);
+  color: var(--text-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  resize: none;
+  outline: none;
+}
+
+button {
+  background: var(--accent);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1em;
+  margin: 10px 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #6c2c91;
+}
+
+.thoughts-wall {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.thought-bubble {
+  background: var(--bubble-color);
+  color: var(--text-color);
+  border-radius: 20px;
+  padding: 15px;
+  max-width: 250px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  animation: floatIn 0.6s ease;
+}
+
+@keyframes floatIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+#motivationBox {
+  margin-top: 15px;
+  font-size: 1.1em;
+  background: var(--bubble-color);
+  color: var(--text-color);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  animation: fadeIn 0.5s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.thought-bubble {
+  transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+.thought-bubble:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}

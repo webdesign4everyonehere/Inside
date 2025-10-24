@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inside My Mind</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="bgMusic" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="container">
+    <h1>🌙 Inside My Mind</h1>
+    <p class="subtitle">Share a thought, advice, or feeling about overthinking here. <br>Share your thoughts freely — no names, no judgment.</p>
+
+    <textarea id="messageInput" placeholder="What's on your mind?"></textarea>
+    <button id="sendBtn">Send</button>
+
+    <div class="buttons">
+      <button id="motivationBtn">💫 Get Motivation</button>
+      <button id="toggleTheme">🌞 Dark Mode</button>
+    </div>
+
+    <div id="motivationBox" class="hidden"></div>
+
+    <div class="thoughts-wall" id="thoughtsWall"></div>
+  </div>
+
+
+  <script src="script.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="firebase-config.js"></script>
+
+</body>
+</html>
